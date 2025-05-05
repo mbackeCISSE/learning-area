@@ -15,6 +15,7 @@
 
       canvas {
         border: 1px solid black;
+        position: relative;
       }
     </style>
     <link rel="stylesheet" href="../styles.css" />
@@ -35,13 +36,26 @@
     const canvas = document.querySelector('canvas');
     const ctx = canvas.getContext('2d');
 
-    const x = 50;
+    const x = 100;
     const y = 60;
     const width = 100;
     const height = 75;
-    const color = 'blue';
+    const color = 'red';
 
     // Add your code here
+
+    function drawRectangle(x, y, rectWidth, rectHeight, rectColor) {
+
+      ctx.reset();
+      
+      const divElement = document.createElement('div');
+
+      ctx.fillStyle = rectColor;
+      ctx.fillRect(x, y, rectWidth, rectHeight);
+
+    }
+
+    drawRectangle(x, y, width, height, color);
 
     // Don't edit the code below here!
 

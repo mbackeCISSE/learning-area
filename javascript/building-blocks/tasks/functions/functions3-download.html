@@ -31,6 +31,16 @@
 
     // Add your code here
 
+    function random(inf = 0, sup = 1) {
+      return Math.floor(Math.random() * (sup - inf)) + inf;
+    }
+
+    function chooseName() {
+      return names[random(0, names.length)];
+    }
+
+    para.textContent = chooseName();
+
     // Don't edit the code below here!
 
     const section = document.querySelector('section');
